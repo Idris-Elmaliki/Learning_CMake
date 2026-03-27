@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION "3.19.2")
+
+# This is how you make comments in a C-Make file!
+
+project(test)
+add_executable(test main.cpp headers/header.cpp headers/header.hpp) # Don't add any commas!!!
+# the order of the executables don't matter
+
+# Test this out yourself: 
+# add_executable(test headers/header.hpp headers/header.cpp main.cpp)
+
+project(test2)
+# we can also this macro instead of just writing the project name
+add_executable(${CMAKE_PROJECT_NAME} "main2.cpp") # you can write your files with or without quotations, it doesn't really matter to CMake
+
+# Don't forget to always do "ctr + s" to update the CMake build!
